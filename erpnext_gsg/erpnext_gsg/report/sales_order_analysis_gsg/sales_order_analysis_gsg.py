@@ -41,7 +41,7 @@ def validate_filters(filters):
 
 	if not from_time and to_time:
 		frappe.throw(_("From and To Times are required."))
-	elif time_diff(to_time, from_time) < 0:
+	elif time_diff(to_time, from_time) < time_diff("00:00:00","00:00:00"):
 		frappe.throw(_("To Date cannot be before From Date."))
 
 
@@ -51,7 +51,7 @@ def get_conditions(filters):
 		conditions += " and so.transaction_date between %(from_date)s and %(to_date)s"
 
 	if filters.get("from_time") and filters.get("to_time"):
-		conditions += " and so.transaction_time between %(from_time)s and %(to_time)s"
+		conditions += " and so.sales_order_time between %(from_time)s and %(to_time)s"
 
 	if filters.get("company"):
 		conditions += " and so.company = %(company)s"
@@ -224,6 +224,7 @@ def prepare_chart_data(pending, completed):
 def get_columns(filters):
 	columns = [
 		{"label": _("Date"), "fieldname": "date", "fieldtype": "Date", "width": 90},
+		{"label": _("Sales order time"), "fieldname": "time", "fieldtype": "Time", "width": 120},
 		{
 			"label": _("Sales Order"),
 			"fieldname": "sales_order",

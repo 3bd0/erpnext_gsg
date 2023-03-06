@@ -2,7 +2,7 @@
 // For license information, please see license.txt
 /* eslint-disable */
 
-frappe.query_reports["Sales Order Analysis Cust"] = {
+frappe.query_reports["Sales Order Analysis GSG"] = {
 		"filters": [
 		{
 			"fieldname": "company",
