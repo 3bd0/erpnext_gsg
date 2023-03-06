@@ -103,6 +103,17 @@ app_license = "MIT"
 #	}
 # }
 
+doctype_js = {
+    "Journal Entry": "public/js/journal_entry.js",
+    "Payment Entry": "public/js/payment_entry.js",
+    "Sales Invoice": "public/js/sales_invoice.js"
+}
+
+doc_events = {
+    "Material Request":
+        {"on_submit": "erpnext_gsg.erpnext_gsg.doc_event.material_request_event.create_stock_entry"}
+}
+
 # Scheduled Tasks
 # ---------------
 
@@ -152,24 +163,24 @@ app_license = "MIT"
 # --------------------
 
 user_data_fields = [
-	{
-		"doctype": "{doctype_1}",
-		"filter_by": "{filter_by}",
-		"redact_fields": ["{field_1}", "{field_2}"],
-		"partial": 1,
-	},
-	{
-		"doctype": "{doctype_2}",
-		"filter_by": "{filter_by}",
-		"partial": 1,
-	},
-	{
-		"doctype": "{doctype_3}",
-		"strict": False,
-	},
-	{
-		"doctype": "{doctype_4}"
-	}
+    {
+        "doctype": "{doctype_1}",
+        "filter_by": "{filter_by}",
+        "redact_fields": ["{field_1}", "{field_2}"],
+        "partial": 1,
+    },
+    {
+        "doctype": "{doctype_2}",
+        "filter_by": "{filter_by}",
+        "partial": 1,
+    },
+    {
+        "doctype": "{doctype_3}",
+        "strict": False,
+    },
+    {
+        "doctype": "{doctype_4}"
+    }
 ]
 
 # Authentication and authorization
@@ -178,4 +189,3 @@ user_data_fields = [
 # auth_hooks = [
 #	"erpnext_gsg.auth.validate"
 # ]
-

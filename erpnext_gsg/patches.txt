@@ -1,0 +1,1 @@
+erpnext_gsg.patches.set_home_page
