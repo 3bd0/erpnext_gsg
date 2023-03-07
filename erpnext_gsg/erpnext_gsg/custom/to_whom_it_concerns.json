@@ -1,0 +1,32 @@
+{
+ "custom_fields": [],
+ "custom_perms": [],
+ "doctype": "To Whom It Concerns",
+ "property_setters": [
+  {
+   "_assign": null,
+   "_comments": null,
+   "_liked_by": null,
+   "_user_tags": null,
+   "creation": "2023-03-07 18:05:18.499178",
+   "default_value": null,
+   "doc_type": "To Whom It Concerns",
+   "docstatus": 0,
+   "doctype_or_field": "DocField",
+   "field_name": "salary",
+   "idx": 0,
+   "modified": "2023-03-07 18:05:18.499178",
+   "modified_by": "Administrator",
+   "name": "To Whom It Concerns-salary-default",
+   "owner": "Administrator",
+   "parent": null,
+   "parentfield": null,
+   "parenttype": null,
+   "property": "default",
+   "property_type": "Text",
+   "row_name": null,
+   "value": ""
+  }
+ ],
+ "sync_on_migrate": 1
+}
