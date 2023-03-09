@@ -105,8 +105,7 @@ app_license = "MIT"
 
 doctype_js = {
     "Journal Entry": "public/js/journal_entry.js",
-    "Payment Entry": "public/js/payment_entry.js",
-    "Sales Invoice": "public/js/sales_invoice.js"
+    "Payment Entry": "public/js/payment_entry.js"
 }
 
 doc_events = {
